@@ -24,3 +24,6 @@ update-apt-cache:
 
 install-git:
 	ansible-playbook -vv -i inventory.ini setup_git.yml --tags git
+
+show-webservers-facts:
+	ansible all -i inventory.ini -m setup
