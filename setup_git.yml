@@ -15,3 +15,20 @@
         update_cache: yes
       tags:
         - git
+
+- name: setup git users
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: add users
+      ansible.builtin.user:
+        name: "{{ item }}"
+        state: present
+        shell: /bin/bash
+      loop: "{{ users }}"
+
+    - name: add Gitconfig for users
+      ansible.builtin.template:
+        src: templates/gitconfig.j2
+        dest: "/home/{{ item }}/.gitconfig"
+      loop: "{{ users }}"

@@ -9,3 +9,9 @@
         state: absent
       tags:
         - git
+
+    - name: remove Gitconfig for users
+      ansible.builtin.file:
+        path: "/home/{{ item }}/.gitconfig"
+        state: absent
+      loop: "{{ users }}"
