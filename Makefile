@@ -9,3 +9,9 @@ ping-web2:
 
 ping-localhost:
 	ansible all -i local.ini -u root -m ping
+
+playbook-setup-git:
+	ansible-playbook -vv -i inventory.ini setup_git.yml
+
+playbook-remove-git:
+	ansible-playbook -vv -i inventory.ini remove_git.yml
