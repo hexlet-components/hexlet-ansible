@@ -6,3 +6,5 @@
       ansible.builtin.apt:
         name: git
         state: absent
+      tags:
+        - git
