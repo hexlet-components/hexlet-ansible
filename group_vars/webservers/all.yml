@@ -5,3 +5,4 @@ users:
   - jaime
   - sansa
   - robert
+server_message: "This is server {{ server_name }}!"
