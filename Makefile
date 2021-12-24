@@ -19,6 +19,9 @@ playbook-remove-git:
 playbook-nginx:
 	ansible-playbook -vv -i inventory.ini nginx.yml
 
+playbook-main:
+	ansible-playbook -vv -i inventory.ini nginx.yml
+
 update-apt-cache:
 	ansible-playbook -vvv -i inventory.ini setup_git.yml --tags apt-cache
 
