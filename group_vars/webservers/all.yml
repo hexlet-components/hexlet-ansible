@@ -6,3 +6,8 @@ users:
   - sansa
   - robert
 server_message: "This is server {{ server_name }}!"
+
+db_name: vagrant
+db_user: vagrant
+db_password: vagrant
+app_dir: /home/vagrant/js-fastify-blog/

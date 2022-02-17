@@ -1,0 +1,6 @@
+roles:
+  - geerlingguy.nodejs
+  - geerlingguy.postgresql
+
+collections:
+  - name: community.postgresql

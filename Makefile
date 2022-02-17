@@ -30,3 +30,6 @@ install-git:
 
 show-webservers-facts:
 	ansible all -i inventory.ini -m setup
+
+play-setup-webservers:
+	ansible-playbook -i inventory.ini s.yml -vv
