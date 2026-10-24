@@ -46,7 +46,7 @@
         source: "127.0.0.1"
         state: present
 
-    - name: Reload postgrsql
+    - name: Reload postgresql
       ansible.builtin.systemd:
         name: postgresql
         state: restarted
